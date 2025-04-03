@@ -1,0 +1,18 @@
+[package]
+name = "mondos"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bootloader="0.9"
+x86_64 = "0.14.2"
+bit-vec = { version = "0.6", default-features = false }
+bitflags = "1"
+byteorder = { version = "1", default-features = false }
+lazy_static = { version = "1", features = ["spin_no_std"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
